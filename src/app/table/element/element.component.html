@@ -1,0 +1,17 @@
+
+<tr class="data-row" >
+
+<td >{{entry.firstname}}</td>
+<td>{{entry.middlename}}</td>
+<td>{{entry.lastname}}</td>
+<td>{{entry.email}}</td>
+<td>{{entry.phone}}</td>
+<td>{{entry.address}}</td>
+<td>{{entry.role_id}}</td>
+<td *ngIf="!editable"><button class="edit_button" (click)="editButton(entry.u_id,S)">Edit</button></td>
+<td *ngIf="!editable"><button (click)="deleteButton(entry.u_id)">Delete</button></td>
+<td><button><a routerLink="../users/{{entry.u_id}}">Details</a></button></td>
+<td *ngIf="editable" (click)="saveButton(entry.u_id,S)"><button>Save</button></td>
+<td *ngIf="editable" (click)="cancelButton(S)"><button>Cancel</button></td>
+</tr>
+
